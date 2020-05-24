@@ -1,0 +1,7 @@
+const express = require('express')
+require('./MongooseDB/Init/initDB')
+const app = express()
+const userroute = require('./Routes/user')
+app.use(express.json())
+app.use(userroute)
+app.listen(3000)
